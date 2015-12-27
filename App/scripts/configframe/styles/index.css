@@ -1,3 +1,17 @@
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #06C;
+    cursor: pointer;
+}
+
+/*头部导航栏*/
 header.top {
     height: 56px;
     display: block;
@@ -10,44 +24,172 @@ header.top .homeHeader {
 header.top .homeHeader div {
     float: left;
     width: 240px;
-    border: 1px solid;
     height: 51px;
+    display: inline-block;
 
+}
+
+header.top .homeHeader div span {
+    width: 196px;
+    height: 44px;
+    display: inline-block;
+    background: url("../images/logo.png") no-repeat;
+    background-size: 190px 44px;
+    margin-top: 11px;
+    margin-left: 15px;
 }
 
 header.top .homeHeader ul {
     list-style-type: none;
-}
-
-header.top .homeHeader ul :first-child {
-    float: left;
-}
-
-header.top .homeHeader ul :last-child {
-    float: right;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 12px;
 }
 
 header.top .homeHeader ul li {
-    display: inline
-}
-
-header.top .homeHeader ul li a {
-    display: block
-}
-
-aside.boolbar {
-    border: 1px solid blue;
-    width: 238px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
     float: left;
 }
 
-section.section {
-    border: 1px solid darkgreen;
-    margin-left: 240px;
+header.top .homeHeader ul li a {
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
 }
 
+header.top .homeHeader ul li a:hover {
+    color: #228591;
+}
+
+div.message {
+    position: absolute;
+    left: 15px;
+    top: -4px;
+    height: 15px !important;
+    display: inline !important;
+    width: 71% !important;
+    color: wheat;
+    line-height: 15px;
+    font-size: 12px;
+    border-radius: 20%;
+}
+
+/*左边导航*/
+
+aside.boolbar {
+    border-right: 1px solid #D9D9D9;
+    width: 220px;
+    float: left;
+    clear: both;
+}
+
+nav.sidebar {
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+ul.nav {
+    position: relative;
+    width: 218px;
+}
+
+.sidebar > .nav > li {
+    border-left: 3px solid transparent;
+    -webkit-transition: border-left-color 0.4s ease;
+    -o-transition: border-left-color 0.4s ease;
+    transition: border-left-color 0.4s ease;
+}
+
+.has-user-block {
+    display: block;
+    overflow: hidden;
+    border: 0 !important;
+}
+
+.user-block {
+    position: relative;
+    padding: 25px 30px 0;
+    cursor: pointer;
+}
+
+.user-block > .user-block-picture {
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.user-block .user-block-info {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.user-block-status {
+    position: relative;
+}
+
+.user-block-status > .circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #fff;
+}
+
+.circle {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 500px;
+    margin: 0 .5em;
+    background-color: #ddd;
+    vertical-align: baseline;
+    border: 2px solid transparent;
+}
+
+.circle-lg {
+    width: 11px;
+    height: 11px;
+}
+
+.circle-success {
+    background-color: #27c24c;
+}
+
+.user-block .user-block-info {
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+.user-block .user-block-info .user-block-name {
+    color: #7D848F;
+}
+
+
+.user-block .user-block-info .user-block-role {
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+
+/*显示区*/
+section.section {
+    margin-left: 221px;
+}
+
+/*最下面版权部分*/
 footer.footer {
-    border: 1px solid yellowgreen;
     display: inline-block;
     width: 100%;
 }

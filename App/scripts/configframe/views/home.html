@@ -2,17 +2,24 @@
 <link type="text/css" rel="stylesheet" href="scripts/configframe/styles/index.css"/>
 <header class="top">
     <nav class="homeHeader">
-        <div></div>
-        <ul>
-            <li><a>1</a></li>
-            <li><a>23</a></li>
-            <li><a>1231</a></li>
+        <div>
+            <span></span>
+        </div>
+        <ul style="float: left;">
+            <li><a><em class="fa fa-navicon"></em></a></li>
+            <li><a><em class="icon-user"></em></a></li>
+            <li><a><em class="fa icon-lock"></em></a></li>
         </ul>
-        <ul>
-            <li><a>334</a></li>
-            <li><a>234</a></li>
-            <li><a>223</a></li>
-            <li><a>3434</a></li>
+        <ul style="float: right;">
+            <li><a><em class="fa icon-magnifier"></em></a></li>
+            <li><a><em class="fa fa-expand"></em></a></li>
+            <li>
+                <a style="position: relative">
+                    <em class="icon-bell"></em>
+                    <div class="message label-danger">11</div>
+                </a>
+            </li>
+            <li><a><em class="fa icon-notebook"></em></a></li>
         </ul>
     </nav>
 </header>
@@ -20,18 +27,43 @@
 <!--<aside ng-include="'scripts/configframe/views/home/sidebar.html'" class="aside"></aside>-->
 <!-- offsidebar-->
 <!--<aside ng-include="'scripts/configframe/views/home/offsidebar.html'" class="offsidebar"></aside>-->
-    <aside class="boolbar">
-        这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏
-        这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏
-        这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏
-        这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏  这个是导航栏
-    </aside>
-    <!-- Main section-->
-    <section class="section">
-        aafafsadf
-        <!-- Page content-->
-        <div ui-view></div>
-    </section>
+<aside class="boolbar">
+    <nav class="sidebar">
+        <ul class="nav">
+            <li class="has-user-block">
+                <div class="user-block">
+                    <div class="user-block-picture">
+                        <div class="user-block-status">
+                            <img ng-src="http://img4.duitang.com/uploads/item/201411/01/20141101172619_5sz2Y.jpeg" alt="" width="60" height="60"
+                                 class="img-thumbnail img-circle">
+                            <div class="circle circle-success circle-lg"></div>
+                        </div>
+                    </div>
+                    <!-- Name and Job-->
+                    <div class="user-block-info">
+                        <span class="user-block-name">Welcome hello</span><br/>
+                        <span class="user-block-role">ng-developer</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a>父节点</a>
+                <ul>
+                    <li><a>节点一</a></li>
+                    <li><a>节点二</a></li>
+                    <li><a>节点三</a></li>
+                    <li><a>节点四</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
+<!-- Main section-->
+<section class="section">
+    aafafsadf
+    <!-- Page content-->
+    <div ui-view></div>
+</section>
 <!-- Page footer-->
 <footer class="footer">
     这是版本声明
