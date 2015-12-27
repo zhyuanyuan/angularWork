@@ -1,0 +1,15 @@
+{
+  "producer": {
+    "serviceMethod": [
+      {
+        "serviceMethod": "222",
+        "serviceMethodRemark": "123",
+        "flag": "1",
+        "version": "13"
+      }
+    ],
+    "classRemarks": "22222222222222222"
+  },
+  "msg": "成功",
+  "code": "0000"
+}

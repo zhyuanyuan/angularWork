@@ -1,0 +1,53 @@
+header.top {
+    height: 56px;
+    display: block;
+    background: #36BDE7
+}
+
+header.top .homeHeader {
+}
+
+header.top .homeHeader div {
+    float: left;
+    width: 240px;
+    border: 1px solid;
+    height: 51px;
+
+}
+
+header.top .homeHeader ul {
+    list-style-type: none;
+}
+
+header.top .homeHeader ul :first-child {
+    float: left;
+}
+
+header.top .homeHeader ul :last-child {
+    float: right;
+}
+
+header.top .homeHeader ul li {
+    display: inline
+}
+
+header.top .homeHeader ul li a {
+    display: block
+}
+
+aside.boolbar {
+    border: 1px solid blue;
+    width: 238px;
+    float: left;
+}
+
+section.section {
+    border: 1px solid darkgreen;
+    margin-left: 240px;
+}
+
+footer.footer {
+    border: 1px solid yellowgreen;
+    display: inline-block;
+    width: 100%;
+}

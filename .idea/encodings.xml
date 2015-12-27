@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/App/scripts/configframe/views/home/footer.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/scripts/configframe/views/home/offsidebar.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/scripts/configframe/views/home/sidebar.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/scripts/configframe/views/home/top-navbar.html" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
