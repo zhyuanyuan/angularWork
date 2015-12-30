@@ -6,7 +6,7 @@ require.config({
     baseUrl: "./scripts",
     paths: {
         "jquery": "../framworks/jquery",
-        "angular": "../framworks/angular1_3/angular",
+        "angular": "../framworks/angular_1_4/angular",
         "angular-ui-router": "../framworks/angular-ui-router",
         //"angular-resource": "../framworks/angular1_3/angular-resource",
         "domReady": "../framworks/domReady",
@@ -19,7 +19,7 @@ require.config({
         "jqGrid-cn": "../framworks/jqGrid/i18n/grid.locale-cn",
         "grid.base": "../framworks/jqGrid/grid.base",
         "jqGrid": "../framworks/jqGrid/jquery.jqGrid",
-        "angular-aminate": "../framworks/angular1_3/angular-animate",
+        "angular-aminate": "../framworks/angular_1_4/angular-animate.min",
         "angular-messages": "../framworks/angular1_3/angular-messages.min",
         "dialog": "../framworks/common-dialog",
         "uuid":"../framworks/uuid"
@@ -58,9 +58,10 @@ require.config({
     }
 });
 require(["angular", "domReady","angular-ui-router", "angular-aminate", "dialog","bootstrap",
-        "configframe/modules/indexModule","configframe/controllers/indexController"],
+        "configframe/modules/indexModule","configframe/controllers/indexController",
+        "configframe/modules/homeModule","configframe/controllers/homeController"],
     function (angular, domReady) {
-    angular.module("Main", ["ui.router","ngAnimate","indexModule" ]).config(["$stateProvider", "$urlRouterProvider",
+    angular.module("Main", ["ui.router","ngAnimate","indexModule","homeModule"]).config(["$stateProvider", "$urlRouterProvider",
         function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/login");
         $stateProvider.state("login", {
@@ -69,10 +70,20 @@ require(["angular", "domReady","angular-ui-router", "angular-aminate", "dialog",
             controller:"indexController"
         }).state("home", {
             url: "/home",
-            templateUrl: "scripts/configframe/views/home.html"
+            templateUrl: "scripts/configframe/views/home.html",
+            controller:"homeController"
         }).state("404", {
             url: "/404",
             templateUrl: "scripts/configframe/views/404.html"
+        });
+    }]).run(["$rootScope", function ($rootScope) {
+        $rootScope.$on("$stateChangeStart", function (event, toself, toParams, fromself, fromParams) {
+            //alert("hello wrod");
+            console.log(event);
+            console.log(toself);
+            console.log(toParams);
+            console.log(fromself);
+            console.log(fromParams);
         });
     }]);
 

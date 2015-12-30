@@ -1,10 +1,4 @@
 module.exports = function (grunt) {
-/*    var requireJsModules = [];
-    grunt.file.expand({cwd:"./App/scripts/"}, "**!/!*.js").forEach( function (file) {
-        if(file !='app.js'){
-            requireJsModules.push(file);
-        }
-    });*/
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
