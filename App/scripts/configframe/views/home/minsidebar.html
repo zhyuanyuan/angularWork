@@ -6,49 +6,21 @@
                     <!-- User picture-->
                     <div class="user-block-picture">
                         <div class="user-block-status">
-                            <img ng-src="http://img4.duitang.com/uploads/item/201411/01/20141101172619_5sz2Y.jpeg" width="60" height="60" class="img-thumbnail img-circle"/>
-                            <div class="circle circle-success circle-lg"></div>
+                            <img ng-src="{{data.user.img}}" width="60" height="60" class="img-thumbnail img-circle"/>
                         </div>
                     </div>
                 </div>
             </div>
         </li>
-        <li>
-            <a><em class="icon-grid"></em></a>
+
+        <li ng-repeat="item in data.menus" id="{{item.id}}">
+             <a title="{{item.title}}" ui-sref="{{item.addr == '' ? 'home':item.addr}}"><em class="{{item.icon}}"></em></a>
             <ul class="contant">
-                <li><a><em class="icon-doc"></em> Dashboard</a></li>
-                <li><a><em class="icon-graduation"></em>Dashboard1</a></li>
-                <li><a><em class="icon-note"></em>Dashboard2</a></li>
-                <li><a><em class="icon-chemistry"></em>Dashboard3</a></li>
+                <li  ng-repeat="childItem in item.children" id="{{childItem.id}}">
+                    <a  ui-sref="{{childItem.addr == '' ? 'home' :childItem.addr }}"> <em class="{{childItem.icon}}"></em>{{childItem.title}}</a>
+                </li>
             </ul>
-            <span class="count">4</span>
-        </li>
-        <li><a><em class="icon-layers"></em> </a></li>
-        <li><a><em class="icon-chemistry"></em> </a></li>
-        <li><a><em class="icon-note"></em> </a></li>
-        <li><a><em class="icon-graph"></em> </a></li>
-        <li><a><em class="fa fa-folder-open-o"></em> </a></li>
-        <li><a><em class="icon-doc"></em> </a></li>
-        <li><a><em class="icon-graduation"></em></a>
-            <ul class="contant">
-                <li><a><em class="icon-doc"></em> Dashboard</a></li>
-                <li><a><em class="icon-graduation"></em>Dashboard1</a></li>
-                <li><a><em class="icon-note"></em>Dashboard2</a></li>
-                <li><a><em class="icon-chemistry"></em>Dashboard3</a></li>
-                <li><a><em class="icon-doc"></em> Dashboard</a></li>
-                <li><a><em class="icon-graduation"></em>Dashboard1</a></li>
-                <li><a><em class="icon-note"></em>Dashboard2</a></li>
-                <li><a><em class="icon-chemistry"></em>Dashboard3</a></li>
-                <li><a><em class="icon-doc"></em> Dashboard</a></li>
-                <li><a><em class="icon-graduation"></em>Dashboard1</a></li>
-                <li><a><em class="icon-note"></em>Dashboard2</a></li>
-                <li><a><em class="icon-chemistry"></em>Dashboard3</a></li>
-                <li><a><em class="icon-doc"></em> Dashboard</a></li>
-                <li><a><em class="icon-graduation"></em>Dashboard1</a></li>
-                <li><a><em class="icon-note"></em>Dashboard2</a></li>
-                <li><a><em class="icon-chemistry"></em>Dashboard3</a></li>
-            </ul>
-            <span class="count">16</span>
+            <span class="count">{{item.children.length}}</span>
         </li>
     </ul>
 </nav>

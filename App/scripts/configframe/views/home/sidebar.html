@@ -1,57 +1,29 @@
 <nav class="sidebar">
-   <ul class="nav">
+   <ul class="navsidebar">
       <li style="padding-left: 0px !important;" class="has-user-block">
          <div class="user-block">
             <div class="user-block-picture">
                <div class="user-block-status">
-                  <img ng-src="http://img4.duitang.com/uploads/item/201411/01/20141101172619_5sz2Y.jpeg" alt="" width="115" height="115"
-                       class="img-thumbnail img-circle">
+                  <img ng-src="{{data.user.img}}" alt="" width="115" height="115" class="img-thumbnail img-circle">
                </div>
             </div>
             <!-- Name and Job-->
             <div class="user-block-info">
-               <span class="user-block-name">Welcome hello</span><br/>
-               <span class="user-block-role">ng-developer</span>
+               <span class="user-block-name">{{data.user.name}}</span><br/>
+               <span class="user-block-role">{{data.user.job}}</span>
             </div>
          </div>
       </li>
-      <li>
-         <a><em class="icon-speedometer"></em>Dashboard</a>
-         <ul class="childLis">
-            <li><a> <em class="icon-grid"></em>  Dashboard v1</a></li>
-            <li><a>Dashboard v2</a></li>
-            <li><a>Dashboard v3</a></li>
-            <li><a>Dashboard v4</a></li>
+
+      <li ng-repeat="item in data.menus"  ng-mouseover="whenmouseover(item.id,$event)" ng-mouseleave="whenmouseleave(item.id,$event)" ng-click="isShow(item.id,$event)" id="{{item.id}}">
+         <a  ui-sref="{{item.addr == '' ? 'home':item.addr}}"><em class="{{item.icon}}"></em>{{item.title}}</a>
+         <ul class="childLis" ng-style="{display : $first ? 'block' :'none'}">
+            <li ng-click="checkItem(childItem.id,$event)" ng-repeat="childItem in item.children" ng-mouseover="whenmouseover(childItem.id,$event)" ng-mouseleave="whenmouseleave(childItem.id,$event)" id="{{childItem.id}}">
+               <a  ui-sref="{{childItem.addr == '' ? 'home' :childItem.addr }}"> <em class="{{childItem.icon}}"></em>{{childItem.title}}</a>
+            </li>
          </ul>
-         <span class="triangle"></span>
-         <span class="count">4</span>
-      </li>
-      <li>
-         <a><em class="icon-graph"></em>父节点2</a>
-         <ul class="childLis">
-            <li><a>节点一</a></li>
-            <li><a>节点二</a></li>
-            <li><a>节点三</a></li>
-            <li><a>节点四</a></li>
-         </ul>
-      </li>
-      <li>
-         <a><em class="icon-map"></em>父节点3</a>
-         <ul class="childLis">
-            <li><a>节点一</a></li>
-            <li><a>节点二</a></li>
-            <li><a>节点三</a></li>
-            <li><a>节点四</a></li>
-         </ul>
-      </li>
-      <li>
-         <a><em class="icon-doc"></em>父节点4</a>
-         <ul class="childLis">
-            <li><a>节点一</a></li>
-            <li><a>节点二</a></li>
-            <li><a>节点三</a></li>
-            <li><a>节点四</a></li>
-         </ul>
+         <!--<span class="triangle"></span>-->
+         <span class="count">{{item.children.length}}</span>
       </li>
    </ul>
 </nav>

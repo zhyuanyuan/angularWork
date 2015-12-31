@@ -79,11 +79,11 @@ require(["angular", "domReady","angular-ui-router", "angular-aminate", "dialog",
     }]).run(["$rootScope", function ($rootScope) {
         $rootScope.$on("$stateChangeStart", function (event, toself, toParams, fromself, fromParams) {
             //alert("hello wrod");
-            console.log(event);
+          /*  console.log(event);
             console.log(toself);
             console.log(toParams);
             console.log(fromself);
-            console.log(fromParams);
+            console.log(fromParams);*/
         });
     }]);
 

@@ -1,16 +1,23 @@
 /**
- * Created by zhangyuanyuan150923 on 2015/12/28.
+ * Created  by zhangyuanyuan150923 on 2015/12/28.
  */
 define(["configframe/modules/homeModule"], function (module) {
-    module.directive("minMenuBar",["$http", function ($http) {
+    module.directive("minMenuBar",[function () {
         return {
-            restrict:"A",
-            scope:{},
-            link: function (scope, ele, attr, control) {
-                var lis=$(ele).find("li:gt(0)").not("ul.contant li");
+            restrict:"E",
+            replace:true,
+            templateUrl:"scripts/configframe/views/home/minsidebar.html",
+            scope:{data:"="},
+            link: function (scope, ele, attr) {
+
+                //console.log(scope.data);
+
+            /*    var lis=$(ele).find("li:gt(0)").not("ul.contant li");
                 lis.hover(function(ev){
+
                    //ev.target;
                     var $this=$(this);
+                    console.log($this);
                     var clientH=$(window).height(),
                         top=$this.offset().top,
                         botH=clientH-(top-$(document).scrollTop()),
@@ -21,6 +28,12 @@ define(["configframe/modules/homeModule"], function (module) {
                 }, function (ev) {
                     $(this).find("ul.contant").stop().slideUp(500);
                 });
+
+                */
+
+                console.log(ele.html());
+
+
             }
         }
     }]);
