@@ -3,7 +3,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                banner: '/!*! <%= pkg.file %> <%= grunt.template.today("yyyy-mm-dd") %> *!/\n'
+                banner: '/!*! <%= pkg.file %><%= grunt.template.today("yyyy-mm-dd") %> *!/\n'
             },
             buildall: {
                 options: {

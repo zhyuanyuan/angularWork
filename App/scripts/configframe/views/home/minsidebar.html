@@ -1,6 +1,6 @@
-<nav>
-    <ul class="navbar">
-        <li class="has-user-block">
+<nav style="height: 100%;">
+    <ul class="mintoolbar">
+        <li style="display: none" class="has-user-block">
             <div  class="collapse in" style="height: auto;">
                 <div>
                     <!-- User picture-->
@@ -12,15 +12,19 @@
                 </div>
             </div>
         </li>
-
-        <li ng-repeat="item in data.menus" id="{{item.id}}">
+        <li ng-click="up()" class="bar up"></li>
+        <li class="menuDetail" ng-repeat="item in data.menus" id="{{item.id}}" ng-mouseover="showChild(item.id)" ng-mouseleave="hideChild(item.id)" ng-click="check(item.id)">
              <a title="{{item.title}}" ui-sref="{{item.addr == '' ? 'home':item.addr}}"><em class="{{item.icon}}"></em></a>
-            <ul class="contant">
-                <li  ng-repeat="childItem in item.children" id="{{childItem.id}}">
-                    <a  ui-sref="{{childItem.addr == '' ? 'home' :childItem.addr }}"> <em class="{{childItem.icon}}"></em>{{childItem.title}}</a>
+            <ul class="contant" ng-if="item.children && item.children.length > 0">
+                <li  ng-repeat="childItem in item.children" id="{{childItem.id}}" ng-click="checkedItem(childItem.id,$event)">
+                    <a ui-sref="{{childItem.addr == '' ? 'home' :childItem.addr }}"> <em class="{{childItem.icon}}"></em>{{childItem.title}}</a>
                 </li>
             </ul>
-            <span class="count">{{item.children.length}}</span>
+            <span class="count">{{item.children.length ? item.children.length : 0}}</span>
         </li>
+        <li ng-click="down()" class="bar down"></li>
     </ul>
 </nav>
+
+
+

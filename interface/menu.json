@@ -6,7 +6,7 @@
   },
   "menus": [
     {
-      "id":"13_345ikdf-234k",
+      "id":"13_345ikdfety-234k",
       "icon": "icon-speedometer",
       "title": "Dashboard",
       "addr": "",
@@ -38,65 +38,40 @@
       ]
     },
     {
-      "id":"13_34sf5ikdf-234234k",
-      "icon": "icon-graph",
-      "title": "图表",
-      "addr": "",
-      "children": [
-        {
-          "id":"13_345afikdf-234sdfk",
-          "icon": "icon-grid",
-          "title": "拆线图",
-          "addr": ""
-        },
-        {
-          "id":"13ert_wer345aasikdf-234sdfk",
-          "icon": "icon-grid",
-          "title": "柱形图",
-          "addr": ""
-        },
-        {
-          "id":"13_345ikdf-234kdsf567fghfgh",
-          "icon": "icon-grid",
-          "title": "饼图",
-          "addr": ""
-        },
-        {
-          "id":"13_345iaakdasdfdsfsdsdfasfdsdfaf-23sadf4k",
-          "icon": "icon-grid",
-          "title": "雷达图",
-          "addr": ""
-        }
-      ]
+      "id":"13_344565ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
     },
+
     {
-      "id":"13_345ikaafs2yu7ddf-adf234k",
-      "icon": "icon-speedometer",
-      "title": "父节点",
+      "id":"13_345ik345df-678234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
       "addr": "",
       "children": [
         {
-          "id":"13_345ikdf-23asdfrty4errtk",
+          "id":"13_345ik3f45df-234k",
           "icon": "icon-grid",
-          "title": "父节一",
+          "title": "Dashboard v1",
           "addr": ""
         },
         {
-          "id":"13asdf_34sdf5ikdf-234k",
+          "id":"13_345ik325gsgdf-234sgk",
           "icon": "icon-grid",
-          "title": "父节二",
+          "title": "Dashboard v2",
           "addr": ""
         },
         {
-          "id":"13_34dfg5ikdfdsfsadfg-23dg4k",
+          "id":"13_345i456kdf-234ksfgfd",
           "icon": "icon-grid",
-          "title": "父节三",
+          "title": "Dashboard v3",
           "addr": ""
         },
         {
-          "id":"13_345ikdf-234kdfgdfawe234",
+          "id":"13_34sd5ikdf-23467k234",
           "icon": "icon-grid",
-          "title": "父节四",
+          "title": "Dashboard v4",
           "addr": ""
         }
       ]
@@ -201,6 +176,147 @@
           "id":"13_34sadfsadff5iksafdf-23a16sdf4k",
           "icon": "icon-grid",
           "title": "节点十六",
+          "addr": ""
+        }
+      ]
+    },
+    {
+      "id":"13_345i456k345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_345ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_456345ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_345ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_343645ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_345ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_34546ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },{
+      "id":"13_345ik345df56-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },{
+      "id":"13_345ik56345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },{
+      "id":"13_345ik46345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_3455ik345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_345ik34645df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+    {
+      "id":"13_345i3k345df-234k",
+      "icon": "icon-grid",
+      "title": "Dashboard v1",
+      "addr": ""
+    },
+
+
+    {
+      "id":"13_34sf5ikdf-234234k",
+      "icon": "icon-graph",
+      "title": "图表",
+      "addr": "",
+      "children": [
+        {
+          "id":"13_345afikdf-234sdfk",
+          "icon": "icon-grid",
+          "title": "拆线图",
+          "addr": ""
+        },
+        {
+          "id":"13ert_wer345aasikdf-234sdfk",
+          "icon": "icon-grid",
+          "title": "柱形图",
+          "addr": ""
+        },
+        {
+          "id":"13_345ikdf-234kdsf567fghfgh",
+          "icon": "icon-grid",
+          "title": "饼图",
+          "addr": ""
+        },
+        {
+          "id":"13_345iaakdasdfdsfsdsdfasfdsdfaf-23sadf4k",
+          "icon": "icon-grid",
+          "title": "雷达图",
+          "addr": ""
+        }
+      ]
+    },
+    {
+      "id":"13_345ikaafs2yu7ddf-adf234k",
+      "icon": "icon-speedometer",
+      "title": "父节点",
+      "addr": "",
+      "children": [
+        {
+          "id":"13_345ikdf-23asdfrty4errtk",
+          "icon": "icon-grid",
+          "title": "父节一",
+          "addr": ""
+        },
+        {
+          "id":"13asdf_34sdf5ikdf-234k",
+          "icon": "icon-grid",
+          "title": "父节二",
+          "addr": ""
+        },
+        {
+          "id":"13_34dfg5ikdfdsfsadfg-23dg4k",
+          "icon": "icon-grid",
+          "title": "父节三",
+          "addr": ""
+        },
+        {
+          "id":"13_345ikdf-234kdfgdfawe234",
+          "icon": "icon-grid",
+          "title": "父节四",
           "addr": ""
         }
       ]

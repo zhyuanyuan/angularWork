@@ -10,7 +10,8 @@ define(["configframe/modules/homeModule", "configframe/services/homeService", "j
             scope: {data: "="},
             replace: true,
             templateUrl: "scripts/configframe/views/home/sidebar.html",
-            link: function ($scope, ele, attr) {
+            controller:["$scope", function ($scope) {
+
                 $scope.whenmouseover = function (id, ev) {
                     ev.stopPropagation();
                     $("#" + id).append("<span class='triangle'></span>");
@@ -20,6 +21,11 @@ define(["configframe/modules/homeModule", "configframe/services/homeService", "j
                     ev.stopPropagation();
                     $("#" + id).parents("ul").find("li span.triangle").remove();
                 };
+
+
+
+            }],
+            link: function ($scope, ele, attr) {
 
                 //parent button click event
                 $scope.isShow = function (id, ev) {

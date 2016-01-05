@@ -17,13 +17,13 @@
 
       <li ng-repeat="item in data.menus"  ng-mouseover="whenmouseover(item.id,$event)" ng-mouseleave="whenmouseleave(item.id,$event)" ng-click="isShow(item.id,$event)" id="{{item.id}}">
          <a  ui-sref="{{item.addr == '' ? 'home':item.addr}}"><em class="{{item.icon}}"></em>{{item.title}}</a>
-         <ul class="childLis" ng-style="{display : $first ? 'block' :'none'}">
+         <ul ng-if="item.children && item.children.length > 0" class="childLis" ng-style="{display : $first ? 'block' :'none'}">
             <li ng-click="checkItem(childItem.id,$event)" ng-repeat="childItem in item.children" ng-mouseover="whenmouseover(childItem.id,$event)" ng-mouseleave="whenmouseleave(childItem.id,$event)" id="{{childItem.id}}">
                <a  ui-sref="{{childItem.addr == '' ? 'home' :childItem.addr }}"> <em class="{{childItem.icon}}"></em>{{childItem.title}}</a>
             </li>
          </ul>
          <!--<span class="triangle"></span>-->
-         <span class="count">{{item.children.length}}</span>
+         <span class="count">{{item.children.length ? item.children.length : 0 }}</span>
       </li>
    </ul>
 </nav>
