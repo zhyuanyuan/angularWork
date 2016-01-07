@@ -19,10 +19,12 @@ require.config({
         "jqGrid-cn": "../framworks/jqGrid/i18n/grid.locale-cn",
         "grid.base": "../framworks/jqGrid/grid.base",
         "jqGrid": "../framworks/jqGrid/jquery.jqGrid",
-        "angular-aminate": "../framworks/angular_1_4/angular-animate.min",
+        "angular-animate": "../framworks/angular_1_4/angular-animate.min",
         "angular-messages": "../framworks/angular1_3/angular-messages.min",
         "dialog": "../framworks/common-dialog",
-        "uuid":"../framworks/uuid"
+        "uuid":"../framworks/uuid",
+        "es5-shim":"../framworks/es5-shim.min",
+        "angular-upload":"../framworks/angular-file-upload"
     },
     waitSeconds: 15,
     map: {
@@ -52,12 +54,13 @@ require.config({
         "jqGrid": {
             deps: ["jquery", "jquery-ui", "jqGrid-cn", "css!../framworks/jqGrid/ui.jqgrid.css"]
         },
-        "angular-aminate": ["jquery", "angular"],
+        "angular-animate": ["jquery", "angular"],
         "angular-messages": ["jquery", "angular"],
-        "dialog": ["jquery", "jquery-ui",  "css!../framworks/jquery_ui/jquery-ui.css"]
+        "dialog": ["jquery", "jquery-ui",  "css!../framworks/jquery_ui/jquery-ui.css"],
+        "angular-upload":["jquery","angular","es5-shim"]
     }
 });
-require(["angular", "domReady","angular-ui-router", "angular-aminate", "dialog","bootstrap",
+require(["angular", "domReady","angular-ui-router", "angular-animate", "dialog","bootstrap",
         "configframe/modules/indexModule","configframe/controllers/indexController",
         "configframe/modules/homeModule","configframe/controllers/homeController"],
     function (angular, domReady) {

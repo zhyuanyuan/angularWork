@@ -1,20 +1,42 @@
 
 <div style="position: relative">
     <link type="text/css" rel="stylesheet" href="scripts/configframe/styles/index.css"/>
+    <style type="text/css">
+       /* .boolbar{
+            transition: 1s all;
+        }
+        .boolbar.ng-enter{
+            opacity: 0;
+        }
+        .boolbar.ng-enter-active{opacity: 1}
+        .boolbar.ng-leave{opacity: 1}
+        .boolbar.ng-leave-active{opacity: 0}
+
+        .minboolbar{
+            transition: 1s all;
+        }
+
+        .minboolbar.ng-enter{
+            opacity: 0;
+        }
+        .minboolbar.ng-enter-active{opacity: 1}
+        .minboolbar.ng-leave{opacity:1}
+        .minboolbar.ng-leave-active{opacity: 0}*/
+    </style>
     <!-- top navbar-->
     <header class="top" ng-include="'scripts/configframe/views/home/top-navbar.html'"></header>
 
     <!--<aside  class="boolbar" ng-include="'scripts/configframe/views/home/sidebar.html'"></aside>-->
-    <aside class="minboolbar" ng-controller="minToolBarController"></aside>
-    <!--<aside class="boolbar" ng-controller="toolbarController"></aside>-->
+    <aside ng-if="toolbarIsShow" class="minboolbar" ng-controller="minToolBarController"></aside>
+    <aside ng-if="!toolbarIsShow" class="boolbar" ng-controller="toolbarController"></aside>
 
     <!-- Main section-->
     <!--  style margin-left: 230px;  -->
-    <section class="section" style="margin-left: 71px;">
+    <section class="section" ng-style="{'margin-left':toolbarIsShow ? '71px' : '231px'}">
         <div class="showTarget">首页</div>
         <!-- Page content-->
-        <div class="topUiView" style="overflow-y: auto;margin-left: 10px;margin-top: 3px;margin-right: 10px;" ui-view>
-            index page
+        <div class="topUiView" style="overflow-y: auto;margin-left: 10px;margin-top: 3px;margin-right: 10px;">
+            <div ui-view></div>
         </div>
         <!-- Page footer-->
         <footer class="footer">

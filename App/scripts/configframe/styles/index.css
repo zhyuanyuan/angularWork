@@ -107,6 +107,7 @@ header.top .homeHeader ul li a {
 
 header.top .homeHeader ul li a:hover {
     color: #AFDFF0;
+    text-decoration: none !important;
 }
 
 div.message {

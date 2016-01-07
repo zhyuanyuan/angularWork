@@ -7,7 +7,7 @@ define(["configframe/modules/homeModule"], function (module) {
             restrict:"E",
             replace:true,
             templateUrl:"scripts/configframe/views/home/minsidebar.html",
-            scope:{data:"="},
+            scope:{data:"=",msg:"="},
             controller:["$scope", function ($scope) {
                 //鼠标放上显示子菜单
                 $scope.showChild= function (id,event) {

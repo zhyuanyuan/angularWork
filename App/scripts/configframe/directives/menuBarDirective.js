@@ -7,11 +7,10 @@ define(["configframe/modules/homeModule", "configframe/services/homeService", "j
     homeModule.directive("menuBar", function () {
         return {
             restrict: "E",
-            scope: {data: "="},
+            scope: {data: "=",msg:"="},
             replace: true,
             templateUrl: "scripts/configframe/views/home/sidebar.html",
             controller:["$scope", function ($scope) {
-
                 $scope.whenmouseover = function (id, ev) {
                     ev.stopPropagation();
                     $("#" + id).append("<span class='triangle'></span>");
@@ -21,12 +20,8 @@ define(["configframe/modules/homeModule", "configframe/services/homeService", "j
                     ev.stopPropagation();
                     $("#" + id).parents("ul").find("li span.triangle").remove();
                 };
-
-
-
             }],
             link: function ($scope, ele, attr) {
-
                 //parent button click event
                 $scope.isShow = function (id, ev) {
                     ev.stopPropagation();

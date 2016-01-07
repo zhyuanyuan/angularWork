@@ -4,17 +4,16 @@
         <span class="logodesc"></span>
     </div>
     <ul style="float: left;">
-        <li><a><em class="fa fa-navicon"></em></a></li>
-        <li><a><em class="icon-user"></em></a></li>
+        <li ng-click="changeMenu()"><a><em class="fa fa-navicon"></em></a></li>
+        <li ng-click="isShowUser()"><a><em class="icon-user"></em></a></li>
         <li><a><em class="fa icon-lock"></em></a></li>
     </ul>
     <ul style="float: right;">
-        <li><a><em class="fa icon-magnifier"></em></a></li>
-        <li><a><em class="fa fa-expand"></em></a></li>
+        <!--<li><a><em class="fa icon-magnifier"></em></a></li>-->
+        <li ng-click="bigest()"><a><em class="fa fa-expand"></em></a></li>
         <li>
             <a style="position: relative">
                 <em class="icon-bell"></em>
-
                 <div class="message label-danger">11</div>
             </a>
         </li>
