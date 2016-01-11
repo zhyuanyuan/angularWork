@@ -1,7 +1,7 @@
 /**
  * Created by zhangyuanyuan150923 on 2015/12/30.
  */
-define(["configframe/modules/homeModule","common/services"], function (homeModule) {
+define(["configframe/modules/homeModule","common/services/ajaxService"], function (homeModule) {
     homeModule.factory("homeService",["ajaxService", function (ajaxService) {
         function getMenuData(){
             return ajaxService.get("../interface/menu.json");

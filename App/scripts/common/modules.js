@@ -1,7 +1,7 @@
 /**
  * Created by zhangyuanyuan150923 on 2015/11/17.
  */
-define(["angular","jquery-ui"], function (angular) {
+define(["angular","jquery-ui","angular-file-upload"], function (angular) {
 //   return  angular.module("commonModule",[],["$httpProvider",function($httpProvider){
 //        // 使用 x-www-form-urlencoded Content-Type
 //        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
@@ -50,6 +50,6 @@ define(["angular","jquery-ui"], function (angular) {
 //
 //    }]);
 
-    return angular.module("commonModule",[]);
+    return angular.module("commonModule",["angularFileUpload"]);
 
 });

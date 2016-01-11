@@ -1,7 +1,7 @@
 /**
  * Created by zhangyuanyuan150923 on 2015/12/25.
  */
-define(["configframe/modules/indexModule", "common/services"], function (indexModule) {
+define(["configframe/modules/indexModule", "common/services/ajaxService"], function (indexModule) {
     indexModule.controller("indexController", ["$scope", "$state", "ajaxService", function ($scope, $state, ajaxService) {
         $(document).on("keyup", function (ev) {
             if (ev.keyCode === 13) {

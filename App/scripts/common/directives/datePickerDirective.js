@@ -13,7 +13,7 @@ define(["common/modules"], function (modules) {
                 dateFromNode: '='
             },
             link: function (scope, ele, attr, con) {
-
+                ele.attr("readonly","readonly");
                 var dateMonths = scope.dateMonths;
                 if (!dateMonths) {
                     dateMonths = 1;
@@ -53,8 +53,3 @@ define(["common/modules"], function (modules) {
         }
     });
 });
-
-
-
-
-

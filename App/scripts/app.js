@@ -24,7 +24,7 @@ require.config({
         "dialog": "../framworks/common-dialog",
         "uuid":"../framworks/uuid",
         "es5-shim":"../framworks/es5-shim.min",
-        "angular-upload":"../framworks/angular-file-upload"
+        "angular-file-upload":"../framworks/angular-file-upload"
     },
     waitSeconds: 15,
     map: {
@@ -57,7 +57,7 @@ require.config({
         "angular-animate": ["jquery", "angular"],
         "angular-messages": ["jquery", "angular"],
         "dialog": ["jquery", "jquery-ui",  "css!../framworks/jquery_ui/jquery-ui.css"],
-        "angular-upload":["jquery","angular","es5-shim"]
+        "angular-file-upload":["jquery","angular","es5-shim"]
     }
 });
 require(["angular", "domReady","angular-ui-router", "angular-animate", "dialog","bootstrap",
